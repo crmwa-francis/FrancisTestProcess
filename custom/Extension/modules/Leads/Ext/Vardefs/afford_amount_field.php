@@ -1,0 +1,23 @@
+<?php
+$dictionary['Lead']['fields']['afford_amount'] = array(
+            'required' => false,
+            'name' => 'afford_amount',
+            'vname' => 'LBL_AFFORD_AMOUNT',
+            'type' => 'currency',
+            'massupdate' => 0,
+            'no_default' => false,
+            'comments' => '',
+            'help' => '',
+            'importable' => 'true',
+            'duplicate_merge' => 'disabled',
+            'duplicate_merge_dom_value' => '0',
+            'audited' => true,
+            'reportable' => true,
+            'unified_search' => false,
+            'merge_filter' => 'disabled',
+            'calculated' => false,
+            'len' => 26,
+            'size' => '20',
+            'enable_range_search' => false,
+            'precision' => 6,
+);

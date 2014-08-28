@@ -1,0 +1,57 @@
+php_flag  log_errors on
+php_value error_log  /home/projects/inproperty_v1/php_error.log
+
+
+# BEGIN SUGARCRM RESTRICTIONS
+RedirectMatch 403 .*\.log$
+RedirectMatch 403 /+not_imported_.*\.txt
+RedirectMatch 403 /+(soap|cache|xtemplate|data|examples|include|log4php|metadata|modules)/+.*\.(php|tpl)
+RedirectMatch 403 /+emailmandelivery\.php
+RedirectMatch 403 /+upload/
+RedirectMatch 403 /+custom/+blowfish
+RedirectMatch 403 /+cache/+diagnostic
+RedirectMatch 403 /+files\.md5$
+
+# Fix mimetype for logo.svg (SP-1395)
+AddType     image/svg+xml     .svg
+AddType     application/json  .json
+AddType     application/javascript  .js
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^rest/(.*)$ api/rest.php?__sugar_url=$1 [L,QSA]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^cache/api/metadata/lang_(.._..)_(.*)_public(_\w*)?\.json$ rest/v10/lang/public/$1?platform=$2&ordered=$3 [N,QSA]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^cache/api/metadata/lang_(.._..)_([^_]*)(_\w*)?\.json$ rest/v10/lang/$1?platform=$2&ordered=$3 [N,QSA]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^cache/Expressions/functions_cache(_debug)?.js$ rest/v10/ExpressionEngine/functions?debug=$1 [N,QSA]
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType application/x-font-woff .woff
+</IfModule>
+<FilesMatch "\.(jpg|png|gif|js|css|ico|woff)$">
+        <IfModule mod_headers.c>
+                Header set ETag ""
+                Header set Cache-Control "max-age=2592000"
+                Header set Expires "01 Jan 2112 00:00:00 GMT"
+        </IfModule>
+</FilesMatch>
+<IfModule mod_expires.c>
+        ExpiresByType text/css "access plus 1 month"
+        ExpiresByType text/javascript "access plus 1 month"
+        ExpiresByType application/x-javascript "access plus 1 month"
+        ExpiresByType image/gif "access plus 1 month"
+        ExpiresByType image/jpg "access plus 1 month"
+        ExpiresByType image/png "access plus 1 month"
+        ExpiresByType application/x-font-woff "access plus 1 month"
+</IfModule>
+# END SUGARCRM RESTRICTIONS

@@ -1,0 +1,3 @@
+({
+    extendsFrom: 'ModulerecordLayout'
+})

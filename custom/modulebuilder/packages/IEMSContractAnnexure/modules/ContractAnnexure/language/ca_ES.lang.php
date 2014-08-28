@@ -1,0 +1,65 @@
+<?php
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/06_Customer_Center/10_Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+$mod_strings = array (
+  'LBL_TEAM' => 'Equip',
+  'LBL_TEAMS' => 'Equips',
+  'LBL_TEAM_ID' => 'Id Equip',
+  'LBL_ASSIGNED_TO_ID' => 'Usuari Assignat',
+  'LBL_ASSIGNED_TO_NAME' => 'Assignat a',
+  'LBL_CREATED' => 'Creat Per',
+  'LBL_CREATED_ID' => 'Creat Per Id',
+  'LBL_CREATED_USER' => 'Creat Per Usuari',
+  'LBL_DATE_ENTERED' => 'Data de Creació',
+  'LBL_DATE_MODIFIED' => 'Última Modificació',
+  'LBL_DELETED' => 'Eliminat',
+  'LBL_DESCRIPTION' => 'Descripció',
+  'LBL_DOC_OWNER' => 'Propietari del document',
+  'LBL_EDIT_BUTTON' => 'Editar',
+  'LBL_ID' => 'ID',
+  'LBL_LIST_NAME' => 'Nom',
+  'LBL_MODIFIED' => 'Modificat Per',
+  'LBL_MODIFIED_ID' => 'Modificat Per Id',
+  'LBL_MODIFIED_NAME' => 'Modificat Per Nom',
+  'LBL_MODIFIED_USER' => 'Modificat Per Usuari',
+  'LBL_NAME' => 'Nom',
+  'LBL_REMOVE' => 'Treure',
+  'LBL_USER_FAVORITES' => 'Usuaris que son favorits',
+  'LBL_LIST_FORM_TITLE' => 'Contract Annexures Llista',
+  'LBL_MODULE_NAME' => 'Contract Annexures',
+  'LBL_MODULE_TITLE' => 'Contract Annexures',
+  'LBL_MODULE_NAME_SINGULAR' => 'Contract Annexure',
+  'LBL_HOMEPAGE_TITLE' => 'Meu Contract Annexures',
+  'LNK_NEW_RECORD' => 'Crear Contract Annexure',
+  'LNK_LIST' => 'Vista Contract Annexures',
+  'LNK_IMPORT_IEMS_CONTRACTANNEXURE' => 'Import Contract Annexure',
+  'LBL_SEARCH_FORM_TITLE' => 'Cercar Contract Annexure',
+  'LBL_HISTORY_SUBPANEL_TITLE' => 'Veure Historial',
+  'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Activitats',
+  'LBL_IEMS_CONTRACTANNEXURE_SUBPANEL_TITLE' => 'Contract Annexures',
+  'LBL_NEW_FORM_TITLE' => 'Nou Contract Annexure',
+  'LNK_IMPORT_VCARD' => 'Import Contract Annexure vCard',
+  'LBL_IMPORT' => 'Import Contract Annexures',
+  'LBL_IMPORT_VCARDTEXT' => 'Automatically create a new Contract Annexure record by importing a vCard from your file system.',
+  'LBL_CONDITION_C' => 'Condition',
+  'LBL_APPROVED' => 'Approved',
+  'LBL_DATE_APPROVED' => 'Date Approved',
+  'LBL_APPROVED_BY' => 'Approved By',
+  'LBL_EXPIRED' => 'Expired',
+  'LBL_CONTRACT_CONTRACT_ID' => 'Contract (related Contract ID)',
+  'LBL_CONTRACT' => 'Contract',
+  'LBL_MASTER_CONTRACT_IEMS_MASTERCONTRACT_ID' => 'Master Contract (related Master Contract ID)',
+  'LBL_MASTER_CONTRACT' => 'Master Contract',
+  'LBL_DOCUMENT_DOCUMENT_ID' => 'Document (related Document ID)',
+  'LBL_DOCUMENT' => 'Document',
+  'LBL_FLEX_RELATE' => 'Parent',
+  'LBL_FILE_MIME_TYPE' => 'File Mime Type',
+);
